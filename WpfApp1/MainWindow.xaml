@@ -7,6 +7,23 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <StackPanel VerticalAlignment="Center">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Width="400" Height="100">
+                <StackPanel>
+                    <Label Content="Ingrese usuario"></Label>
+                    <TextBox x:Name="txtUsuario"></TextBox>
+                </StackPanel>
+                <StackPanel>
+                    <Label Content="Ingrese Contraseña"></Label>
+                    <PasswordBox x:Name="txtContraseña"></PasswordBox>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Content="Ingresar" Margin="10 0" Background="Blue" Height="30" Width="200" Click="Button_Click"/>
+                <Button Content="Cancelar" Background="Red" Height="30" Width="200"/>
+            </StackPanel>
+        </StackPanel>
+        
+        
     </Grid>
 </Window>

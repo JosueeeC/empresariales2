@@ -20,9 +20,32 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            string usuario = txtUsuario.Text;
+            string contraseña = txtContraseña.Password;
+
+            if (usuario == "josue" && contraseña == "123456")
+            {
+                Window1 window = new Window1();
+                window.Show();
+            }
+            else
+            {
+                MessageBoxResult result = System.Windows.MessageBox.Show("Usuario o contraseña incorrectos", "Error al iniciar sesión");
+
+                result = MessageBoxResult.OK;
+            }
+
+
+            
         }
     }
 }
